@@ -1,0 +1,40 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Presentation section specific styles */
+.home__presentation {
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  transition: transform 0.5s ease-out;
+}
+
+.title:hover {
+  transform: translateX(20px);
+}
+
+.paragraph {
+  transition: opacity 0.3s ease-out;
+}
+
+/* Add smooth transitions for dark mode */
+@media (prefers-color-scheme: dark) {
+  .home__presentation {
+    transition: background-color 0.3s ease;
+  }
+}
